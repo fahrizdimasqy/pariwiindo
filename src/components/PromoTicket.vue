@@ -1,6 +1,11 @@
 <template>
   <v-app>
     <v-container fluid>
+      <div class="text-right">
+        <v-btn small text to="/tickets" class="blue--text">
+          All Tickets <v-icon>mdi-chevron-right</v-icon>
+        </v-btn>
+      </div>
       <h4>Ticket</h4>
       <v-row dense>
         <v-col v-for="ticket in tickets" :key="ticket.id" :cols="ticket.flex">
@@ -16,9 +21,9 @@
 
             <v-card-actions>
               <div class="d-inline-block text-truncate">
-                <v-card-textcard class="ml-3"
+                <v-card-subtitle class="text-truncate"
                   >{{ ticket.description }}
-                </v-card-textcard>
+                </v-card-subtitle>
                 <v-card-text>{{ `Rp.${ticket.price}` }}</v-card-text>
               </div>
             </v-card-actions>

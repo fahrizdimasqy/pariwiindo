@@ -57,8 +57,10 @@
         </div>
       </template>
     </v-navigation-drawer>
+
     <v-main>
-      <Home />
+      <!-- <Home /> -->
+      <router-view></router-view>
     </v-main>
     <v-bottom-navigation fixed :value="value" color="primary">
       <v-btn>
@@ -86,7 +88,7 @@
 </template>
 
 <script>
-import Home from "./views/Home";
+// import Home from "./views/Home";
 // import TicketCard from "./components/TicketCard";
 // optional style for arrows & dots
 // import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
@@ -97,7 +99,7 @@ export default {
   components: {
     // VueSlickCarousel,
     // TicketCard,
-    Home,
+    // Home,
   },
 
   data: () => ({
@@ -146,6 +148,11 @@ export default {
       ],
     },
     value: 0,
+    computed: {
+      isHome() {
+        return this.$route.path === "/";
+      },
+    },
   }),
 };
 </script>
