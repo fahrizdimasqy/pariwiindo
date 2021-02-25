@@ -13,12 +13,14 @@
               width="160"
               class="grey darken-4"
             ></v-img>
-
             <v-card-title class="d-block text-truncate">{{
               ticket.title
             }}</v-card-title>
             <v-card-subtitle class="text-truncate">
               {{ ticket.description }}
+            </v-card-subtitle>
+            <v-card-subtitle>
+              {{ `Rp.${ticket.price}` }}
             </v-card-subtitle>
           </v-card>
         </v-col>
