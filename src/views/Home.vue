@@ -29,13 +29,14 @@
       </v-row>
     </v-container>
     <promo-ticket />
+    <ticket-card />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import PromoTicket from "../components/PromoTicket";
-// import TicketCard from "../components/TicketCard";
+import TicketCard from "../components/TicketCard";
 // import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 export default {
@@ -43,7 +44,7 @@ export default {
   components: {
     // VueSlickCarousel,
     "promo-ticket": PromoTicket,
-    // TicketCard,
+    "ticket-card": TicketCard
   },
   data: () => ({
     carousel: {
@@ -60,8 +61,8 @@ export default {
           breakpoint: 1024,
           settings: {
             arrow: false,
-            slidesToShow: 1,
-          },
+            slidesToShow: 1
+          }
         },
         {
           breakpoint: 600,
@@ -69,8 +70,8 @@ export default {
             arrow: false,
             swipe: true,
             swipeToSlide: true,
-            slidesToShow: 1,
-          },
+            slidesToShow: 1
+          }
         },
         {
           breakpoint: 480,
@@ -78,10 +79,10 @@ export default {
             swipe: true,
             swipeToSlide: true,
             arrow: false,
-            slidesToShow: 1,
-          },
-        },
-      ],
+            slidesToShow: 1
+          }
+        }
+      ]
     },
     settings: {
       dots: true,
@@ -90,7 +91,7 @@ export default {
       infinite: false,
       speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1,
+      slidesToScroll: 1
     },
     promo: [
       {
@@ -98,16 +99,16 @@ export default {
         image: "https://via.placeholder.com/150",
         name: "Ekonomi",
         slug: "ekonomi",
-        price: 15000,
+        price: 15000
       },
       {
         id: 1,
         image: "https://via.placeholder.com/150",
         name: "Ekonomi",
         slug: "ekonomi",
-        price: 20000,
-      },
-    ],
-  }),
+        price: 20000
+      }
+    ]
+  })
 };
 </script>

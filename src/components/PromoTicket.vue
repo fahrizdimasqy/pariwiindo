@@ -16,7 +16,10 @@
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
               height="150px"
             >
-              <v-card-title v-text="ticket.title"></v-card-title>
+              <v-card-title
+                v-text="ticket.title"
+                class="title-text"
+              ></v-card-title>
             </v-img>
 
             <v-card-actions>
@@ -38,21 +41,21 @@
 export default {
   name: "PromoTicket",
   data: () => ({
-    tickets: [],
+    tickets: []
   }),
   created() {
     console.log("get data categories");
     this.axios
-      .get("http://pariwiindo-api.test/v1/tickets/top/4")
-      .then((response) => {
+      .get("http://pariwiindo-api.test/v1/tickets")
+      .then(response => {
         let { data } = response.data;
         this.tickets = data;
       })
-      .catch((error) => {
+      .catch(error => {
         let { response } = error;
         console.log(response);
       });
-  },
+  }
 };
 </script>
 <style scoped></style>

@@ -98,7 +98,7 @@ export default {
 
   components: {
     // VueSlickCarousel,
-    // TicketCard,
+    // TicketCard
     // Home,
   },
 
@@ -107,9 +107,9 @@ export default {
     drawer: false,
     menus: [
       { title: "Home", icon: "mdi-home", route: "/" },
-      { title: "About", icon: "mdi-account", route: "/about" },
+      { title: "About", icon: "mdi-account", route: "/about" }
     ],
-    guest: true,
+    guest: false,
     carousel: {
       arrow: true,
       infinite: false,
@@ -124,8 +124,8 @@ export default {
           breakpoint: 1024,
           settings: {
             arrow: false,
-            slidesToShow: 1,
-          },
+            slidesToShow: 1
+          }
         },
         {
           breakpoint: 600,
@@ -133,8 +133,8 @@ export default {
             arrow: false,
             swipe: true,
             swipeToSlide: true,
-            slidesToShow: 1,
-          },
+            slidesToShow: 1
+          }
         },
         {
           breakpoint: 480,
@@ -142,18 +142,18 @@ export default {
             swipe: true,
             swipeToSlide: true,
             arrow: false,
-            slidesToShow: 1,
-          },
-        },
-      ],
+            slidesToShow: 1
+          }
+        }
+      ]
     },
     value: 0,
     computed: {
       isHome() {
         return this.$route.path === "/";
-      },
-    },
-  }),
+      }
+    }
+  })
 };
 </script>
 <style scoped>
